@@ -9,6 +9,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            position: relative; /* Ensure the fireworks are positioned correctly */
         }
         .return-btn {
             display: inline-block;
@@ -19,11 +20,41 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        /* Container for fireworks */
+        #fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure it's behind other content */
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.0/dist/index.min.js"></script>
 </head>
 <body>
+    <div id="fireworks"></div>
     <h1>Congratulations, your order has been received!</h1>
     <p>Thank you for your purchase! Your order is being processed.</p>
     <a href="index.html" class="return-btn">Return to Catalogue</a>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('fireworks');
+            const fireworks = new Fireworks(container, {
+                opacity: 0.8,
+                acceleration: 1.1,
+                friction: 0.95,
+                gravity: 0.8,
+                particles: 150,
+                traceLength: 3,
+                traceSpeed: 10,
+            });
+
+            fireworks.start();
+
+            // Optionally stop fireworks after a certain time
+            setTimeout(() => fireworks.stop(), 10000);
+        });
+    </script>
 </body>
 </html>
