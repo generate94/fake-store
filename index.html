@@ -43,10 +43,22 @@
             text-decoration: none;
             border-radius: 5px;
         }
+.title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .title-container img {
+            height: 1em; /* Matches the height of the text */
+            margin-left: 10px; /* Space between the text and the image */
+        }
     </style>
 </head>
 <body>
-    <h1>Fake Store</h1>
+    <div class="title-container">
+        <h1>Fake Store</h1>
+        <img src="images/pinkstar.jpg" alt="Pink Star">
+    </div>
     <div class="gallery">
         <div class="product">
             <img src="images/fmonza.jpg" alt="Ferrari Monza SP2">
