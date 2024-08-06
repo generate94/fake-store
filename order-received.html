@@ -19,22 +19,39 @@
             text-decoration: none;
             border-radius: 5px;
         }
-        .fireworks-gif {
-            width: 50%; /* Adjust size as needed */
-            max-width: 250px; /* Ensure it doesn't get too large */
+        #donate-button-container {
+            margin-top: 30px;
+        }
+        #donate-button img {
+            width: auto;
+            height: 50px; /* Adjust the height if needed */
+        }
+        .donate-message {
             margin-top: 20px;
-            display: block; /* Ensure it is displayed as a block element */
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1.2em;
+            color: #333;
         }
     </style>
 </head>
 <body>
-<h1>Congratulations, your order has been received!</h1>
-    <p>Your order is on its way and should arrive faster than expected! Thank you for your purchase!</p>
-    <!-- Add the GIF here -->
-    <img src="images/fireworks.gif" alt="Fireworks" class="fireworks-gif">
-    <br>
+    <h1>Congratulations, your order is on its way!</h1>
+    <p>Thank you for your purchase! Your order is being processed and will arrive faster than expected.</p>
+    <div id="donate-button-container">
+        <div id="donate-button"></div>
+        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+        <script>
+            PayPal.Donation.Button({
+                env: 'production',
+                hosted_button_id: '3PLYJ9EN636WQ',
+                image: {
+                    src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+                    alt: 'Donate with PayPal button',
+                    title: 'PayPal - The safer, easier way to pay online!',
+                }
+            }).render('#donate-button');
+        </script>
+    </div>
+    <p class="donate-message">Generosity may or may not speed up your order; your experience may vary.</p>
     <a href="index.html" class="return-btn">Return to Catalogue</a>
 </body>
 </html>
