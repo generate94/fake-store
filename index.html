@@ -16,18 +16,18 @@
             font-family: 'Comic Sans MS', cursive, sans-serif;
         }
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
             justify-content: center;
+            padding: 20px;
         }
         .product {
             border: 1px solid #ddd;
             border-radius: 5px;
-            margin: 10px;
             padding: 10px;
-            width: 200px;
-            text-align: center;
             background-color: #fff;
+            text-align: center;
         }
         .product img {
             width: 100%;
@@ -54,31 +54,27 @@
             <p>Price: $1800000</p>
             <a href="order-received.html" class="buy-now">Buy Now</a>
         </div>
-
-                <div class="product">
+        <div class="product">
             <img src="images/miura.jpg" alt="Lamborghini Miura">
             <p>Lamborghini Miura</p>
             <p>Price: $2000000</p>
             <a href="order-received.html" class="buy-now">Buy Now</a>
         </div>
-
         <div class="product">
             <img src="images/wilescosteam.jpg" alt="Wilesco D5 Steam Engine Model Kit">
             <p>Wilesco D5 Steam Engine Model Kit</p>
             <p>Price: $200</p>
             <a href="order-received.html" class="buy-now">Buy Now</a>
         </div>
-
         <div class="product">
             <img src="images/cancun.jpg" alt="Cancun Resort Week">
             <p>Cancun Resort Week</p>
             <p>Price: $800</p>
             <a href="order-received.html" class="buy-now">Buy Now</a>
         </div>
-
-                <div class="product">
+        <div class="product">
             <img src="images/lotus.jpg" alt="1975 Lotus Type 2 Illustration">
-            <p>Cancun Peter Hutton Illustration</p>
+            <p>Peter Hutton Illustration</p>
             <p>Price: $250</p>
             <a href="order-received.html" class="buy-now">Buy Now</a>
         </div>
