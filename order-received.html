@@ -19,6 +19,14 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        .fireworks-gif {
+            width: 50%; /* Adjust size as needed */
+            max-width: 250px; /* Ensure it doesn't get too large */
+            margin-top: 20px;
+            display: block; /* Ensure it is displayed as a block element */
+            margin-left: auto;
+            margin-right: auto;
+        }
         #donate-button-container {
             margin-top: 30px;
         }
@@ -35,7 +43,9 @@
 </head>
 <body>
     <h1>Congratulations, your order is on its way!</h1>
-    <p>Thank you for your purchase! Your order is being processed and will arrive faster than expected.</p>
+    <p>Your order is being processed and should arrive faster than expected. Thank you for your purchase!</p>
+    <!-- Add the GIF here -->
+    <img src="images/fireworks.gif" alt="Fireworks" class="fireworks-gif">
     <div id="donate-button-container">
         <div id="donate-button"></div>
         <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
